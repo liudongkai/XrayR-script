@@ -66,9 +66,9 @@ if [[ x"${release}" == x"centos" ]]; then
         echo -e "${red}请使用 CentOS 7 或更高版本的系统！${plain}\n" && exit 1
     fi
 elif [[ x"${release}" == x"alios" ]]; then
+    release='centos';
     if [[ ${os_version} -lt 2 ]]; then
         echo -e "${red}请使用 Alibaba Cloud Linux 2 或更高版本的系统！${plain}\n" && exit 1
-	release='centos';
     fi
 elif [[ x"${release}" == x"ubuntu" ]]; then
     if [[ ${os_version} -lt 16 ]]; then
